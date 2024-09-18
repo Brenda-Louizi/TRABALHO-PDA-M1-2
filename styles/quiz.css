@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62.5%;
+}
+body{
+    background-image: url(../assets/images/quiz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: ;
+}
+
+.questionario{
+    background-color: #00000079;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.perguntas{
+    text-align: center;
+    background-color: aqua;
+    border-radius: 20px;
+}
