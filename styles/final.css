@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+
+body{
+    background-image: url(../assets/images/a-nostalgic-pixel-art-game-background-featuring-a--FSoEedkyQdWvxRpci_irKw-grQKfOlIQqSENdoAPZPScQ.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    align-items:center ;
+    justify-items: center;  
+    height: 100%;
+}
+
+.texto{
+    /* display: flex; 
+    align-items:center ; 
+    justify-items: center;  */
+    flex-direction: column;
+}
+
+.texto h1{
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
