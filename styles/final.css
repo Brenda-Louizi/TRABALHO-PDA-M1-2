@@ -1,34 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
-
-
 body{
     background-image: url(../assets/images/a-nostalgic-pixel-art-game-background-featuring-a--FSoEedkyQdWvxRpci_irKw-grQKfOlIQqSENdoAPZPScQ.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Pixelify Sans", sans-serif;
     font-weight: bold;
+    /* height: 100vh;
+    overflow-y: auto; */
 }
 
 main{
-    display: flex;
-    align-items:center ;
-    justify-items: center;  
-    height: 100%;
+    display: flex; /*inicia o flexbox(precisa ser iniciado para o justify, align e etc funcionar*/
+    justify-content: center;  /*move o container pai na horizontal*/
+    margin-top: 15em;
 }
 
 .texto{
-    /* display: flex; 
-    align-items:center ; 
-    justify-items: center;  */
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .texto h1{
-    align-items: center;
-    justify-content: center;
-
-
+    align-items: center; /*alinha os flex itens na horizontal*/
+    justify-content: center; /*alinha os flex itens na horizontal*/
+    font-size: 4rem; /*muda o tamanho do texto*/
 }
 
+.texto p {
+    font-size: 2rem;
+}
 
 
