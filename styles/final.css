@@ -1,31 +1,71 @@
-body{
-    background-image: url(../assets/images/a-nostalgic-pixel-art-game-background-featuring-a--FSoEedkyQdWvxRpci_irKw-grQKfOlIQqSENdoAPZPScQ.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Pixelify Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+/* @font-face {
+    font-family: 'KarmaFuture'; 
+    src: url('../treinando/fontes/Karma\ Future.otf') format('woff'), 
+         url('../treinando/fontes/Karma\ Suture.otf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} */
+
+@font-face {
+    font-family: 'shape'; 
+    src: url('../assets/fontes/Shape\ Bit.otf format('woff'), 
+         /* url('../treinando/fontes/Broken_Console/Broken\ Console\ Bold.ttf') format('truetype'); */
+    font-weight:normal; 
+    font-style:normal; 
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'shape', sans-serif;
     font-weight: bold;
-    /* height: 100vh;
-    overflow-y: auto; */
 }
 
-main{
-    display: flex; /*inicia o flexbox(precisa ser iniciado para o justify, align e etc funcionar*/
-    justify-content: center;  /*move o container pai na horizontal*/
-    margin-top: 15em;
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.texto{
-    /* flex-direction: column; */
+.imagens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.texto h1{
-    align-items: center; /*alinha os flex itens na horizontal*/
-    justify-content: center; /*alinha os flex itens na horizontal*/
-    font-size: 4rem; /*muda o tamanho do texto*/
+.imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.texto p {
-    font-size: 2rem;
+.texto {
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(61, 233, 9);
+    text-align: center;
+    z-index: 1;
+  
+   
 }
-
 
