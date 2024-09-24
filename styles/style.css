@@ -22,9 +22,11 @@ body {
 
 main {
   display: flex;
+  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   flex: 1;
+  /* position: relative; */
 }
 
 video {
@@ -138,4 +140,19 @@ video {
 
 .button-sound img {
   width: 100%;
+}
+
+.mapa {
+  background-color: rgba(14, 241, 223, 0.342);
+  height: 500px;
+  width: 500px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  /* top: -100px; */
+  right: 31%;
+  border-radius: 10%;
+  
+
 }
