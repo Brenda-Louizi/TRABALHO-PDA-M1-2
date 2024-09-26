@@ -1,0 +1,7 @@
+const facil = [
+    {
+        pergunta: "",
+        resposta: "",
+        
+    }
+]
