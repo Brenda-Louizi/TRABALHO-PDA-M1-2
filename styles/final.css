@@ -10,8 +10,8 @@
 
 @font-face {
     font-family: 'shape'; 
-    src: url('../assets/fontes/Shape\ Bit.otf format('woff'), 
-         /* url('../treinando/fontes/Broken_Console/Broken\ Console\ Bold.ttf') format('truetype'); */
+    src: url('../assets/fontes/Shape\ Bit.otf') format('woff')
+          url('../treinando/fontes/Broken_Console/Broken\ Console\ Bold.ttf') format('truetype'); 
     font-weight:normal; 
     font-style:normal; 
 }
@@ -67,5 +67,8 @@ main {
     z-index: 1;
   
    
+}
+#nextButton{
+    display:none;
 }
 

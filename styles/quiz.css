@@ -27,6 +27,8 @@ button {
   font-size: 0.95rem;
   border: none;
   border-radius: 35px;
+
+  transition: filter 0.2s;
 }
 .butaoredm {
   display: flex;
@@ -77,8 +79,21 @@ main {
   display: grid;
   gap: 8.5px;
   padding: 30px 0 10px;
+
 }
+/* .start-quiz{
+  padding: 0px;
+  padding-right:2px ;
+  background: #63b0d2;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  text-indent: 2.4px;
+  border-radius: 15px;
+  border: 2px solid #000000
+} */
 button:hover{
-  background: linear-gradient(#4276A0,#0c3b6165)
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#4276A0,#0c3b6165);
+  filter: brightness(0.5);
  
 }

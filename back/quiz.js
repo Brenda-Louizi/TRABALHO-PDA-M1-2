@@ -1,8 +1,8 @@
 let pergunta = [ 
     { 
-        titulo: "Quando kratos se torna o novo deus da guerra?", 
-        alternativa: ["A-depois de matar Atena.", "B-depos de matar Zeus.", "C-depois de matar Ares.", "D-depois de matar Átropos."], 
-        correta: 1 
+        titulo: "Quando Kratos se torna o novo deus da guerra?", 
+        alternativa: ["A-depois de matar Atena.", "B-depois de matar Zeus.", "C-depois de matar Ares.", "D-depois de matar Átropos."], 
+        correta: 1 // Corrigido para o índice correto
     }, 
     { 
         titulo: "Qual material é necessário para criar a armadura de Meteorite?", 
@@ -40,7 +40,9 @@ let app = {
             element.addEventListener('click', () => { 
                 this.checaResposta(index); 
             }); 
-        }); 
+        });
+        // Oculta o botão de "Next" no início
+        document.getElementById('nextButton').style.display = 'none'; 
         this.atualizaPontos(); 
         app.mostraQuestao(pergunta[this.Atualpos]); 
     },
@@ -68,15 +70,21 @@ let app = {
         if (this.qatual.correta == user) { 
             console.log("Correta"); 
             this.Totalpontos++; 
-            this.mostrareposta(true); // Corrigido para passar true ou false 
+            this.mostrareposta(true); 
         } else { 
             console.log("Errada"); 
             this.mostrareposta(false); 
+            this.resetarJogo();
         }
 
         this.atualizaPontos(); 
-        this.Proximaperg(); 
-        this.mostraQuestao(pergunta[this.Atualpos]); 
+        // Se a pontuação chegar a 6, exibe o botão "Next"
+        if (this.Totalpontos === 6) { 
+            document.getElementById('nextButton').style.display = 'block'; 
+        } else { 
+            this.Proximaperg(); 
+            this.mostraQuestao(pergunta[this.Atualpos]); 
+        }
     },
 
     atualizaPontos: function() { 
@@ -87,21 +95,27 @@ let app = {
     mostrareposta: function(correto) { 
         let resultDiv = document.getElementById("result"); 
         let result = ``; 
-        // Formatar com a mensagem será exibida 
         if (correto == true) { 
             result = `Resposta Correta!`; 
         } else { 
-            // Obtendo a questão atual 
-            let perguntaAtual = pergunta[this.Atualpos]; // Corrigido nome da variável 
-            // Obtenha o índice da resposta correta da questão atual 
+            let perguntaAtual = pergunta[this.Atualpos]; 
             let cindice = perguntaAtual.correta; 
-            // Obtenha o texto da resposta correta da questão atual 
             let ctexto = perguntaAtual.alternativa[cindice]; 
-            result = `Incorreto! Resposta correta: ${ctexto}`; 
+            result = `Incorreto!`; 
         } 
         resultDiv.textContent = result; 
+    },
+    
+    resetarJogo:function(){
+        alert("VOCÊ PERDEU O JOGO");
+        location.href ="index.html"
     }
 };
 
-app.start();
+// Função do botão "Next"
+document.getElementById('nextButton').addEventListener('click', function() {
+    alert("Parabéns, você completou o quiz!");
+    location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
+});
 
+app.start();
