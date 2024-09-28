@@ -16,6 +16,7 @@ body {
   background-size: cover;
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
+  overflow: hidden;
 }
 
 button {
@@ -29,7 +30,7 @@ button {
 }
 .butaoredm {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   width: 100%;
 }
 .butaoEnviar {
@@ -48,9 +49,9 @@ span {
   justify-content: space-between;
   padding-right: 2.7px;
   padding-bottom: 1.086px;
-  background: #ffffff;
+  /* background: #ffffff; */
   border-radius: 50%;
-  border: 2.5px solid #000000;
+  /* border: 2.5px solid #000000; */
 }
 .questionario {
   display: flex;
@@ -65,7 +66,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 0px;
 }
 .perguntas {
   background-color: #80c2de;
@@ -74,6 +75,10 @@ main {
 }
 .respostas {
   display: grid;
-  gap: 18px;
-  padding: 50px 0 30px;
+  gap: 8.5px;
+  padding: 30px 0 10px;
+}
+button:hover{
+  background: linear-gradient(#4276A0,#0c3b6165)
+ 
 }
