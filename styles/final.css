@@ -59,16 +59,57 @@ main {
 
 .texto {
     position: absolute;
-    top: 40%; 
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(61, 233, 9);
     text-align: center;
     z-index: 1;
-  
-   
+    
 }
+.texto img {
+    max-width:100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 #nextButton{
     display:none;
 }
 
+#confetti {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        /* Estilo para o botão com imagem */
+        .image-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .image-button img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .texto {
+            position: absolute;
+            top: 40%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            color: rgb(61, 233, 9);
+            text-align: center;
+            z-index: 1;
+            height: 50%;
+            width: 50%;
+        }
