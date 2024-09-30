@@ -1,32 +1,33 @@
+var pagina = 0 
 let pergunta = [ 
     { 
-        titulo: "Quando Kratos se torna o novo deus da guerra?", 
-        alternativa: ["A-depois de matar Atena.", "B-depois de matar Zeus.", "C-depois de matar Ares.", "D-depois de matar Átropos."], 
-        correta: 1 // Corrigido para o índice correto
+        titulo: "Qual o nome da mãe de Zeus?", 
+        alternativa: ["A) Gaia ", "B) Láquesis", "C) Cloto", "D) Reia"], 
+        correta: 3// Corrigido para o índice correto
     }, 
     { 
-        titulo: "Qual material é necessário para criar a armadura de Meteorite?", 
-        alternativa: ["A) Hellstone.", "B) Demonite.", "C) Meteorite.", "D) Crimtane."], 
-        correta: 2 
+        titulo: "Qual personagem de street fighter é brasileiro?", 
+        alternativa: ["A) Blanka", "B) Laura Matsuda", "C) Chun-Li ", "D) Ryu"], 
+        correta: 1
     }, 
     { 
-        titulo: "Como pedir alguém em namoro no Stardew Valley?", 
-        alternativa: ["A) dando um anel.", "B) dando uma rosa.", "C) dando um buquê especial.", "D) dando um anel especial."], 
-        correta: 2 
+        titulo: "Qual é o nome do evento que é desencadeado ao usar a 'Suspicious Looking Skull'", 
+        alternativa: ["A) Pumpkin Moon.", "B) Frost Moon", "C) Solar Eclipse.", " D) Old One's Army."], 
+        correta: 3
     }, 
     { 
-        titulo: "Em que ano o jogo Fortnite foi lançado?", 
-        alternativa: ["A) 2014.", "B) 2017.", "C) 2019.", "D) 2021."], 
-        correta: 1 
+        titulo: "Qual é o número máximo de máteriais(madeira, pedra, metal) que um jogador pode carregar de cada tipo em Fortnite?", 
+        alternativa: ["A) 750", "B) 1000", "C) 500", "D) 999"], 
+        correta: 2
     }, 
     { 
-        titulo: "Qual cidade de Runeterra deu origem ao Teemo?", 
-        alternativa: ["A) Bandópolis.", "B) Demacia.", "C) Ionia.", "D) O Vazio."], 
-        correta: 0 
+        titulo: "Qual jogo deu origem a Counter-Strike?", 
+        alternativa: ["A) GTA San Andreas", "B) Gmode", " C) Battlefield 2 ", "D) Half-Life"], 
+        correta: 3
     }, 
     { 
-        titulo: "O que o mob Creeper de Minecraft era para ser no começo?", 
-        alternativa: ["A) Vaca.", "B) Vilager Zumbi.", "C) Porco Mutante.", "D) Enderman."], 
+        titulo: "Qual foi a data de lançamento do Minecraft?", 
+        alternativa: ["A) 18 de novembro de 2011", "B) 21 de Julho de 2011", "C)1 de Setembro de 2011", "D) 15 de Julho de 2011"], 
         correta: 2 
     } 
 ];
@@ -34,7 +35,8 @@ let pergunta = [
 let app = { 
     start: function() { 
         this.Atualpos = 0; 
-        this.Totalpontos = 0; 
+        this.score = localStorage.getItem("score")
+        this.Totalpontos = this.score; 
         let alts = document.querySelectorAll('.alternativa'); 
         alts.forEach((element, index) => { 
             element.addEventListener('click', () => { 
@@ -79,8 +81,10 @@ let app = {
 
         this.atualizaPontos(); 
         // Se a pontuação chegar a 6, exibe o botão "Next"
-        if (this.Totalpontos === 6) { 
+        if (this.Totalpontos === 18) { 
             document.getElementById('nextButton').style.display = 'block'; 
+            localStorage.setItem("score", this.Totalpontos)
+            pagina++
         } else { 
             this.Proximaperg(); 
             this.mostraQuestao(pergunta[this.Atualpos]); 
@@ -115,7 +119,10 @@ let app = {
 // Função do botão "Next"
 document.getElementById('nextButton').addEventListener('click', function() {
     alert("Parabéns, você completou o quiz!");
-    location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
+    if(pagina===1){
+        location.href ="final.html";
+    }
+    // location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
 });
 
 app.start();

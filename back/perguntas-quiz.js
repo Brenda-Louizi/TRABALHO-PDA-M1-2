@@ -116,7 +116,7 @@ const media = [
             {texto:"A) Allay ", correto:false},
             {texto:"B) Tatu ", correto:true},
             {texto:"C) Carangueijo ", correto:false},
-            {texto:"D) Pinguin ", correto:false},
+            {texto:"D) Enderman", correto:false},
         ]
     }
 ]
