@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2em;
+}
+
+.btn {
+    /* padding: 0.1em; */
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    transition-property: transform;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-0.2em);
+    background-color: aqua;
+}
+
+.btn-voltar {
+    width: 5%;
+}
+
+.btn-voltar img {
+    width: 100%;
+}
+
+.btn-avancar {
+    width: 5%;
+}
+
+.btn-avancar img {
+    width: 100%;
+}
+
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* gap: 2em; */
+    width: 100%;
+    position: relative;
+    
+    
+}
+
+.container img {
+    width: 75%;
+}
+
+.esconder {
+    display: none;
+    position: absolute;
+}   
+
+.selecionado {
+    display: block;
+}
