@@ -5,16 +5,43 @@
 
 body {
     background-color: white;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    padding: 2em;
+    padding: 2em; */
 }
+
+.carrosel {
+    position: relative;
+    max-width: 84%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagem {
+    min-width: 100%;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 
 .btn {
     /* padding: 0.1em; */
+    position: absolute;
+    top: 50%;
+
+
     background-color: rgba(255, 0, 0, 0);
     border: none;
     transition-property: transform;
@@ -29,6 +56,7 @@ body {
 
 .btn-voltar {
     width: 5%;
+    left: 10px;
 }
 
 .btn-voltar img {
@@ -37,34 +65,9 @@ body {
 
 .btn-avancar {
     width: 5%;
+    right: 10px;
 }
 
 .btn-avancar img {
     width: 100%;
-}
-
-
-.container {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    /* gap: 2em; */
-    width: 100%;
-    position: relative;
-    
-    
-}
-
-.container img {
-    width: 75%;
-}
-
-.esconder {
-    display: none;
-    position: absolute;
-}   
-
-.selecionado {
-    display: block;
 }

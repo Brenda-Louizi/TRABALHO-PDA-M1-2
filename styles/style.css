@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
 
+/* falsa */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 html {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -18,26 +21,18 @@ body {
   overflow: hidden; /*esconde/tira a barra de rolagem*/
   height: 100vh;
   overflow-y: auto;
+  background-image: url(../assets/images/background-zenitsu.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   flex: 1;
-  /* position: relative; */
 }
 
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
 
 #menu-logo {
   display: flex ;
@@ -49,11 +44,19 @@ video {
 }
 
 .menu {
+  /* original */
+
   display: flex;
-  justify-content: center;
-  /* flex-direction: column; */
-  /* height: 100%; */
-  /* margin-top: 75px; */
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 20px;
+
+  /* falso */
+
+  top: 80%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
 }
 
 .menu-buttons {
@@ -70,7 +73,7 @@ video {
   width: 100%;
   height: 52px;
   border-radius: 25px;
-  background-color: #3e617f;
+  background-color: #eb9d00af;
   border: none;
   cursor: pointer;
   color: black;
@@ -81,35 +84,35 @@ video {
   font-size: 2em;
 }
 
-.menu-buttons a:hover {
-  background-color: #35546eef;
+#btn-cor {
+  background-color: #1d93e7c0;
 }
 
-.menu-icons {
+#btn-cor:hover {
+  background-color: #1d93e7e7;
+}
+
+.menu-buttons a:hover {
+  background-color: #eb9d00ee;
+}
+
+/* .menu-icons {
   display: flex;
   justify-content: flex-end;
   gap: 0.8em;
   padding-top: 1.4em;
   padding-bottom: 1.4em;
   padding-right: 2em;
- 
-  /* margin-top: 33em; */
 }
 
-/* span {
-  width: 10em;
-} */
 
 .menu-icons button {
   display: flex;
   justify-content: center;
   align-items: end;
-  /* width: 2em; */
-  /* height: 3em; */
   background: none;
   border: none;
   cursor: pointer;
-  /* transition: padding-bottom 0.1s; */
 }
 
 .menu-icons button img {
@@ -119,8 +122,6 @@ video {
 }
 
 .menu-icons button img:hover {
-  /* background-color: red; */
-  /* padding-bottom: 2.1em; */
   transform: translateY(-0.2em);
 }
 
@@ -130,8 +131,6 @@ video {
 
 .button-map img {
   width: 100%;
-  /* padding-bottom: 2em; */
-  /* background-color: red;   */
 }
 
 .button-sound {
@@ -150,9 +149,56 @@ video {
   align-items: center;
   justify-content: center;
   position: absolute;
-  /* top: -100px; */
   right: 31%;
   border-radius: 10%;
-  
+} */
 
+/* falso */
+.btn {
+  font-size: 1.2em;
+  font-family: 'Press Start 2P', cursive;
+  width: 200px;
+  height: 70px;
+  background: #06C1DE;
+  border: 0px;
+  position: relative;
+  box-shadow: 
+    inset -4px 2px 1px 1px grey,
+    inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;   
+}
+
+.btn:hover {
+  cursor: pointer;
+	background-color: #06B6D1;
+}
+
+.btn:active {
+  top: 5px;
+  box-shadow: 
+    -4px 2px 1px 1px grey,
+    -4px -2px 1px 1px lightgray,
+    4px 0px 1px 1px lightgray; 
+}
+
+.btn::after {
+  content: '';
+  background: black;
+  position: absolute;
+  left: -2.5%;
+  top: 0;
+  width: 105%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn::before {
+  content: '';
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: 113%;
+  z-index: -1;
 }

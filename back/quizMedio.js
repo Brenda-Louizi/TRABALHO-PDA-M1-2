@@ -118,7 +118,6 @@ let app = {
 
 // Função do botão "Next"
 document.getElementById('nextButton').addEventListener('click', function() {
-    alert("Parabéns, você completou o quiz!");
     if(pagina===1){
         location.href ="quiz3.html";
     }

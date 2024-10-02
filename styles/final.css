@@ -72,6 +72,11 @@ main {
     height: auto;
     display: block;
     margin: 0 auto;
+    opacity: 0;
+}
+
+#parabens {
+    opacity: 1;
 }
 
 #nextButton{

@@ -20,36 +20,14 @@
 
         <div class="texto">
             <button class="image-button">
-            <img src="../assets/images/you win.png" alt="You Win">
+            <img src="../assets/images/you win.png" alt="You Win" id="parabens">
         </div><!--fim da div texto-->
         
         <canvas id="confetti"></canvas>
         <button id="btn">🎉</button>
 
-        <!-- <div class="creditos">
-            <button>brenda</button>
-            <button>yasmim</button>
-            <button>pietro</button>
-            <button>odilon</button>
-            <button>hadiel</button>
-            <button>felipe</button>
-
-        </div>fim da div creditos -->
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script>
-        const btn = document.querySelector('#btn');
-        const jsConfetti = new JSConfetti();
-
-        btn.addEventListener('click', () => {
-            jsConfetti.addConfetti()
-        });
-
-        window.onload = () => {
-            jsConfetti.addConfetti()
-        }
-    </script>
-
+    <script src="../back/final.js"></script>
 </body>
 </html>
