@@ -16,9 +16,8 @@ body {
 
 .carrosel {
   position: relative;
-  max-width: 84%;
+  max-width: 100%;
   margin: auto;
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -33,7 +32,6 @@ body {
 
 .imagem img {
   width: 100%;
-  border-radius: 10px;
 }
 
 .btn {
