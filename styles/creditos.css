@@ -1,73 +1,96 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: white;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 2em; */
+  background-color: white;
+  /* Flexbox descomentado se necessário */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+  /* overflow: hidden; */
+  /* padding: 2em; */
 }
 
 .carrosel {
-    position: relative;
-    max-width: 84%;
-    margin: auto;
-    overflow: hidden;
-    height: 100vh;
+  position: relative;
+  max-width: 84%;
+  margin: auto;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .container {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease; /* Transição para as imagens */
 }
 
 .imagem {
-    min-width: 100%;
+  min-width: 100%;
 }
 
 .imagem img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
-
 
 .btn {
-    /* padding: 0.1em; */
-    position: absolute;
-    top: 50%;
-
-
-    background-color: rgba(255, 0, 0, 0);
-    border: none;
-    transition-property: transform;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 35%;
+  background-color: #00c49b; /* Cor de fundo levemente visível */
+  border: none;
+  cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+  transition: transform 0.25s ease-in-out;
 }
 
-.btn:hover {
-    transform: translateY(-0.2em);
-    background-color: aqua;
+.btn img {
+  width: 30px; /* Ajuste o tamanho da seta */
+  height: auto; /* Manter a proporção da imagem */
 }
 
 .btn-voltar {
-    width: 5%;
-    left: 10px;
-}
-
-.btn-voltar img {
-    width: 100%;
+  left: 10px; /* Espaçamento à esquerda */
 }
 
 .btn-avancar {
-    width: 5%;
-    right: 10px;
+  right: 10px; /* Espaçamento à direita */
 }
 
-.btn-avancar img {
+.btn:hover {
+  transform: scale(1.1); /* Efeito de hover para aumentar a seta */
+}
+
+.voltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.voltar .btn-pag-inicial img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.voltar .btn-pag-inicial:hover img {
+  transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 5%;
+  }
+
+  .btn-voltar,
+  .btn-avancar {
+    top: 45%;
+  }
+
+  .imagem img {
     width: 100%;
+    height: auto;
+  }
 }

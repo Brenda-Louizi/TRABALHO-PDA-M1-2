@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
 
-/* falsa */
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
 html {
   font-family: "Jersey 10", sans-serif;
@@ -33,9 +32,8 @@ main {
   flex: 1;
 }
 
-
 #menu-logo {
-  display: flex ;
+  display: flex;
   justify-content: center;
 }
 
@@ -44,19 +42,13 @@ main {
 }
 
 .menu {
-  /* original */
-
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   gap: 20px;
-
-  /* falso */
-
   top: 80%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .menu-buttons {
@@ -89,100 +81,38 @@ main {
 }
 
 #btn-cor:hover {
-  background-color: #1d93e7e7;
+  background-color: #1d93e7;
 }
 
 .menu-buttons a:hover {
   background-color: #eb9d00ee;
 }
 
-/* .menu-icons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.8em;
-  padding-top: 1.4em;
-  padding-bottom: 1.4em;
-  padding-right: 2em;
-}
-
-
-.menu-icons button {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-icons button img {
-  transition-property: transform;
-  transition-duration: 0.25s;
-  transition-timing-function: ease-in-out;
-}
-
-.menu-icons button img:hover {
-  transform: translateY(-0.2em);
-}
-
-.button-map {
-  max-width: 2.5em;
-}
-
-.button-map img {
-  width: 100%;
-}
-
-.button-sound {
-  max-width: 2.5em;
-}
-
-.button-sound img {
-  width: 100%;
-}
-
-.mapa {
-  background-color: rgba(14, 241, 223, 0.342);
-  height: 500px;
-  width: 500px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 31%;
-  border-radius: 10%;
-} */
-
-/* falso */
 .btn {
   font-size: 1.2em;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   width: 200px;
   height: 70px;
-  background: #06C1DE;
+  background: #06c1de;
   border: 0px;
   position: relative;
-  box-shadow: 
-    inset -4px 2px 1px 1px grey,
-    inset -4px -2px 1px 1px lightgray,
-    inset 4px 0px 1px 1px lightgray;   
+  box-shadow: inset -4px 2px 1px 1px grey, inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;
 }
 
 .btn:hover {
   cursor: pointer;
-	background-color: #06B6D1;
+  background-color: #06b6d1;
 }
 
 .btn:active {
   top: 5px;
-  box-shadow: 
-    -4px 2px 1px 1px grey,
-    -4px -2px 1px 1px lightgray,
-    4px 0px 1px 1px lightgray; 
+  box-shadow: -4px 2px 1px 1px grey, -4px -2px 1px 1px lightgray,
+    4px 0px 1px 1px lightgray;
 }
 
 .btn::after {
-  content: '';
+  content: "";
   background: black;
   position: absolute;
   left: -2.5%;
@@ -193,7 +123,7 @@ main {
 }
 
 .btn::before {
-  content: '';
+  content: "";
   background: black;
   position: absolute;
   left: 0;
@@ -201,4 +131,13 @@ main {
   width: 100%;
   height: 113%;
   z-index: -1;
+}
+
+@media screen and (max-width:500px){
+  
+
+
+  #menu-logo img{
+    max-width: 40rem;
+  }
 }

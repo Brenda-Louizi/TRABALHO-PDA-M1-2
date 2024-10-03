@@ -1,24 +1,27 @@
-const btn = document.getElementsByTagName('main');
-        const jsConfetti = new JSConfetti();
-        const parabens = document.getElementById('parabens')
+const btn = document.getElementsByTagName('main')[0]; // Obtenha o primeiro elemento <main>
+const jsConfetti = new JSConfetti();
+const parabens = document.getElementById('parabens');
 
-        const estilosParabens = [{
-            opacity: '0'
-        },
-        {
-            opacity: '1'
-        }]
+const estilosParabens = [
+    { opacity: '0' },
+    { opacity: '1' }
+];
 
-        let indiceAtual = 0;
+let indiceAtual = 0;
 
-        btn[0].addEventListener('click', () => {
-            jsConfetti.addConfetti()
-        });
+// Adiciona o evento de clique ao elemento <main>
+btn.addEventListener('click', () => {
+    jsConfetti.addConfetti();
+});
 
-        window.onload = () => {
-            jsConfetti.addConfetti()
-            setInterval(function () {
-                parabens.style.opacity = estilosParabens[indiceAtual].opacity
-                indiceAtual = (indiceAtual + 1) % estilosParabens.length
-            }, 1500)
-        }
+// Função que alterna a opacidade do "parabéns"
+const alternarOpacidade = () => {
+    parabens.style.opacity = estilosParabens[indiceAtual].opacity;
+    indiceAtual = (indiceAtual + 1) % estilosParabens.length; // Ciclo através dos estilos
+};
+
+// Inicia a animação de confete e a opacidade ao carregar a página
+window.onload = () => {
+    jsConfetti.addConfetti();
+    setInterval(alternarOpacidade, 300);
+};

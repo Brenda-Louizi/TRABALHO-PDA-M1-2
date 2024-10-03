@@ -1,120 +1,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
 
-/* @font-face {
-    font-family: 'KarmaFuture'; 
-    src: url('../treinando/fontes/Karma\ Future.otf') format('woff'), 
-         url('../treinando/fontes/Karma\ Suture.otf') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal; 
-} */
-
 @font-face {
-    font-family: 'shape'; 
-    src: url('../assets/fontes/Shape\ Bit.otf') format('woff')
-          url('../treinando/fontes/Broken_Console/Broken\ Console\ Bold.ttf') format('truetype'); 
-    font-weight:normal; 
-    font-style:normal; 
+  font-family: "shape";
+  src: url("../assets/fontes/Shape Bit.otf") format("woff"),
+       url("../treinando/fontes/Broken_Console/Broken Console Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-family: 'shape', sans-serif;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "shape", sans-serif;
+  font-weight: bold;
 }
 
 main {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .imagens {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .imagens img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .texto {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(61, 233, 9);
-    text-align: center;
-    z-index: 1;
-    
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(61, 233, 9);
+  text-align: center;
+  z-index: 1;
+  height: 50%;
+  width: 50%;
 }
+
 .texto img {
-    max-width:100%; 
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    opacity: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0; /* Mantenha inicialmente oculto, se necessário */
 }
 
 #parabens {
-    opacity: 1;
+  opacity: 1; /* Exibe a imagem quando necessário */
 }
 
-#nextButton{
-    display:none;
+#nextButton {
+  display: none;
 }
 
 #confetti {
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            pointer-events: none;
-        }
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+}
 
-        /* Estilo para o botão com imagem */
-        .image-button {
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-        }
+/* Estilo para o botão com imagem */
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
-        .image-button img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+.image-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-        .texto {
-            position: absolute;
-            top: 40%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            color: rgb(61, 233, 9);
-            text-align: center;
-            z-index: 1;
-            height: 50%;
-            width: 50%;
-        }
+.restart {
+    position: absolute; /* ou relative, se preferir */
+    bottom: 20px; /* Ajuste a posição conforme necessário */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Certifique-se de que está acima de outros elementos */
+}
+
+.restart button {
+    background: none; /* Remover o fundo do botão */
+    border: none; /* Remover bordas */
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+}
+
+.restart img {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+@media screen and (max-width: 500px){
+    .texto{
+        width: 90%;
+    }
+}

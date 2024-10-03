@@ -6,15 +6,20 @@ h1 {
   color: #ffffff;
 }
 h3 {
+  font-size: 1.45rem;
   color: #666666;
 }
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url(../assets/images/quiz.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
   overflow: hidden;
+  height: 100vh;
 }
 
 button {
@@ -22,11 +27,16 @@ button {
   background: #80c2de;
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1rem;
   border: none;
   border-radius: 35px;
-
   transition: filter 0.2s;
+
+  &:hover{
+    transform: rotate3d(1, 0, 0, 360deg);
+    transition: 1.5s;
+    color: #12181e;
+  }
 }
 .butaoredm {
   display: flex;
@@ -49,9 +59,7 @@ span {
   justify-content: space-between;
   padding-right: 2.7px;
   padding-bottom: 1.086px;
-  /* background: #ffffff; */
   border-radius: 50%;
-  /* border: 2.5px solid #000000; */
 }
 .questionario {
   display: flex;
@@ -72,26 +80,17 @@ main {
   background-color: #80c2de;
   text-align: center;
   border-radius: 20px;
+  padding: 5px;
 }
 .respostas {
   display: grid;
   gap: 8.5px;
   padding: 30px 0 10px;
-
 }
-/* .start-quiz{
-  padding: 0px;
-  padding-right:2px ;
-  background: #63b0d2;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  text-indent: 2.4px;
-  border-radius: 15px;
-  border: 2px solid #000000
-} */
+
 button:hover{
   color: rgb(255, 255, 255);
   background: linear-gradient(#4276A0,#0c3b6165);
-  filter: brightness(0.5);
+  filter: brightness(0.7);
  
 }

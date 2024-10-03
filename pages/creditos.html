@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/creditos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/creditos.css" />
+  </head>
+  <body>
     <div class="carrosel">
-        <div class="container">
-            <div class="imagem ativo"><img src="../assets/images/odilon-perfil.png" alt=""></div>
-            <div class="imagem"><img src="../assets/images/hadiel-perfil.png" alt=""></div>
-            <div class="imagem"><img src="../assets/images/felipe-perfil.gif" alt=""></div>
-            <div class="imagem"><img src="../assets/images/brenda-perfil.gif" alt=""></div>
-            <div class="imagem"><img src="../assets/images/pietro-perfil.gif" alt=""></div>
-            <div class="imagem"><img src="../assets/images/yasmin-perfil.png"></div>
+      <div class="container">
+        <div class="imagem ativo">
+          <img src="../assets/images/odilon-perfil.png" alt="" />
         </div>
-        <button class="btn btn-voltar" onclick="mudarSlide(-1)">
-            <img src="../assets/images/arrow-left.png" alt="">
-        </button>
-        <button class="btn btn-avancar" onclick="mudarSlide(1)">
-            <img src="../assets/images/arrow-right.png" alt="">
-        </button>
+        <div class="imagem">
+          <img src="../assets/images/hadiel-perfil.png" alt="" />
+        </div>
+        <div class="imagem">
+          <img src="../assets/images/felipe-perfil.gif" alt="" />
+        </div>
+        <div class="imagem">
+          <img src="../assets/images/brenda-perfil.gif" alt="" />
+        </div>
+        <div class="imagem">
+          <img src="../assets/images/pietro-perfil.gif" alt="" />
+        </div>
+        <div class="imagem">
+          <img src="../assets/images/yasmin-perfil.png" />
+        </div>
+      </div>
+      <button class="btn btn-voltar" onclick="mudarSlide(-1)">
+        <img src="../assets/images/arrow-left.png" alt="" />
+      </button>
+      <button class="btn btn-avancar" onclick="mudarSlide(1)">
+        <img src="../assets/images/arrow-right.png" alt="" />
+      </button>
     </div>
+
+    <div class="voltar">
+      <button class="btn-pag-inicial" onclick="location.href='index.html'">
+        <img src="../assets/images/web-house.png" alt="Página Inicial" />
+      </button>
+    </div>
+
     <script src="../back/creditos.js"></script>
-</body>
+  </body>
 </html>
