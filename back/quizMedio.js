@@ -1,9 +1,9 @@
 var body = document.body;
 
-// Define a imagem de fundo
+
 body.style.backgroundImage = "url('../assets/images/background-medio.gif')";
 
-// Ajusta outras propriedades do background
+
 body.style.backgroundRepeat = "no-repeat";
 body.style.backgroundSize = "cover";
 body.style.backgroundPosition = "center";
@@ -14,14 +14,14 @@ perguntas.style.backgroundColor = "rgba(207, 207, 51, 1)";
 var buttons = document.querySelectorAll(".respostas button");
 
 buttons.forEach(function (button) {
-  button.style.backgroundColor = "rgba(224, 221, 36, 0.694)"; // Cor de fundo desejada
+  button.style.backgroundColor = "rgba(224, 221, 36, 0.694)"; 
 
   button.addEventListener("mouseover", function () {
-    this.style.backgroundColor = "rgba(224, 142, 36, 0.694)"; // Cor ao passar o mouse
+    this.style.backgroundColor = "rgba(224, 142, 36, 0.694)";
   });
 
   button.addEventListener("mouseout", function () {
-    this.style.backgroundColor = "rgba(224, 221, 36, 0.694)"; // Restaura a cor original
+    this.style.backgroundColor = "rgba(224, 221, 36, 0.694)"; 
   });
 });
 var pagina = 0;
@@ -34,7 +34,7 @@ let pergunta = [
       "Colocando-a na espada de Zeus.",
       "No mundo dos mortos.",
     ],
-    correta: 2, // Corrigido para o índice correto
+    correta: 2, 
   },
   {
     titulo:
@@ -98,7 +98,7 @@ let app = {
         this.checaResposta(index);
       });
     });
-    // Oculta o botão de "Next" no início
+    
     document.getElementById("nextButton").style.display = "none";
     this.atualizaPontos();
     app.mostraQuestao(pergunta[this.Atualpos]);
@@ -106,10 +106,10 @@ let app = {
 
   mostraQuestao: function (q) {
     this.qatual = q;
-    // Mostrando o título
+    
     let titleDiv = document.getElementById("titulo");
     titleDiv.textContent = q.titulo;
-    // Mostrando as alternativas
+    
     let alts = document.querySelectorAll(".alternativa");
     alts.forEach(function (element, index) {
       element.textContent = q.alternativa[index];
@@ -135,7 +135,7 @@ let app = {
     }
 
     this.atualizaPontos();
-    // Se a pontuação chegar a 6, exibe o botão "Next"
+    
     if (this.Totalpontos === 12) {
       document.getElementById("nextButton").style.display = "block";
       localStorage.setItem("score", this.Totalpontos);
@@ -171,12 +171,12 @@ let app = {
   },
 };
 
-// Função do botão "Next"
+
 document.getElementById("nextButton").addEventListener("click", function () {
   if (pagina === 1) {
     location.href = "quiz3.html";
   }
-  // location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
+  
 });
 
 app.start();

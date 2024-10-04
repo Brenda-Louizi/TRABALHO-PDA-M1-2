@@ -65,11 +65,11 @@ main {
   height: auto;
   display: block;
   margin: 0 auto;
-  opacity: 0; /* Mantenha inicialmente oculto, se necessário */
+  opacity: 0; 
 }
 
 #parabens {
-  opacity: 1; /* Exibe a imagem quando necessário */
+  opacity: 1;
 }
 
 #nextButton {
@@ -86,7 +86,6 @@ main {
   pointer-events: none;
 }
 
-/* Estilo para o botão com imagem */
 .image-button {
   background: none;
   border: none;
@@ -101,22 +100,21 @@ main {
 }
 
 .restart {
-    position: absolute; /* ou relative, se preferir */
-    bottom: 20px; /* Ajuste a posição conforme necessário */
+    position: absolute; 
+    bottom: 20px; 
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translateX(-50%);
-    z-index: 2; /* Certifique-se de que está acima de outros elementos */
+    z-index: 2; 
 }
 
 .restart button {
-    background: none; /* Remover o fundo do botão */
-    border: none; /* Remover bordas */
-    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    background: none;
+    border: none; 
+    cursor: pointer; 
 }
-
 .restart img {
-    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 50px; 
     height: auto;
 }
 

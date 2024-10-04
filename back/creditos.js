@@ -8,16 +8,16 @@ function mudarSlide(n) {
 function mostrarSlides(n) {
     const imagens = document.getElementsByClassName('imagem');
 
-    // Reseta a contagem dos slides
+    
     if (n >= imagens.length) senhaSlide = 0;
     if (n < 0) senhaSlide = imagens.length - 1;
 
-    // Esconde todas as imagens
+    
     for (let i = 0; i < imagens.length; i++) {
         imagens[i].style.display = 'none';
     }
 
-    // Mostra a imagem atual
+    
     imagens[senhaSlide].style.display = 'block';
 }
 
@@ -38,11 +38,11 @@ function checkOrientation() {
     }
 }
 
-// Adiciona os eventos de load e resize para verificar a orientação
+
 window.addEventListener('load', checkOrientation);
 window.addEventListener('resize', checkOrientation);
 
-// Adiciona eventos de clique aos botões
+
 const btnAvancar = document.getElementById('btn-avancar');
 const btnVoltar = document.getElementById('btn-voltar');
 

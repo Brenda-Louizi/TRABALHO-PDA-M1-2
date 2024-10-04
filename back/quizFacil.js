@@ -8,7 +8,7 @@ let pergunta = [
       "depois de matar Zeus.",
       "depois de matar Átropos.",
     ],
-    correta: 1, // Corrigido para o índice correto depois de matar Ares depois de matar Zeus
+    correta: 1, 
   },
   {
     titulo: "Qual material é necessário para criar a armadura de Meteorite?",
@@ -52,7 +52,7 @@ let app = {
         this.checaResposta(index);
       });
     });
-    // Oculta o botão de "Next" no início
+   
     document.getElementById("nextButton").style.display = "none";
     this.atualizaPontos();
     app.mostraQuestao(pergunta[this.Atualpos]);
@@ -60,10 +60,10 @@ let app = {
 
   mostraQuestao: function (q) {
     this.qatual = q;
-    // Mostrando o título
+    
     let titleDiv = document.getElementById("titulo");
     titleDiv.textContent = q.titulo;
-    // Mostrando as alternativas
+    
     let alts = document.querySelectorAll(".alternativa");
     alts.forEach(function (element, index) {
       element.textContent = q.alternativa[index];
@@ -89,7 +89,7 @@ let app = {
     }
 
     this.atualizaPontos();
-    // Se a pontuação chegar a 6, exibe o botão "Next"
+    
     if (this.Totalpontos === 6) {
       document.getElementById("nextButton").style.display = "block";
       localStorage.setItem("score", this.Totalpontos);
@@ -125,12 +125,12 @@ let app = {
   },
 };
 
-// Função do botão "Next"
+
 document.getElementById("nextButton").addEventListener("click", function () {
   if (pagina === 1) {
     location.href = "quiz2.html";
   }
-  // location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
+
 });
 
 app.start();

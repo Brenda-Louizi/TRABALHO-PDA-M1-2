@@ -1,5 +1,5 @@
 var body = document.body;
-// Define a imagem de fundo
+
 body.style.backgroundImage = "url('../assets/images/background-dificil.jpg')";
 body.style.backgroundRepeat = "no-repeat";
 body.style.backgroundSize = "cover";
@@ -7,7 +7,7 @@ body.style.backgroundPosition = "center";
 
 var titulo = document.getElementById("titulo");
 
-// Muda a cor do texto
+
 titulo.style.color = "#a3911c";
 
 var perguntas = document.querySelector(".perguntas");
@@ -16,14 +16,14 @@ perguntas.style.backgroundColor = "rgba(90, 22, 11)";
 var buttons = document.querySelectorAll(".respostas button");
 
 buttons.forEach(function (button) {
-  button.style.backgroundColor = "rgba(90,22,11)"; // Cor de fundo desejada
+  button.style.backgroundColor = "rgba(90,22,11)"; 
   button.style.color = "#a3911c"
   button.addEventListener("mouseover", function () {
-    this.style.backgroundColor = "#fd0f0f"; // Cor ao passar o mouse
+    this.style.backgroundColor = "#fd0f0f"; 
   });
 
   button.addEventListener("mouseout", function () {
-    this.style.backgroundColor = "rgba(90,22,11)"; // Restaura a cor original
+    this.style.backgroundColor = "rgba(90,22,11)"; 
   });
 });
 
@@ -33,7 +33,7 @@ let pergunta = [
   {
     titulo: "Qual o nome da mãe de Zeus?",
     alternativa: ["Gaia ", "Láquesis", "Cloto", "Reia"],
-    correta: 3, // Corrigido para o índice correto
+    correta: 3, 
   },
   {
     titulo: "Qual personagem de Street Fighter é brasileiro?",
@@ -85,7 +85,7 @@ let app = {
         this.checaResposta(index);
       });
     });
-    // Oculta o botão de "Next" no início
+    
     document.getElementById("nextButton").style.display = "none";
     this.atualizaPontos();
     app.mostraQuestao(pergunta[this.Atualpos]);
@@ -93,10 +93,10 @@ let app = {
 
   mostraQuestao: function (q) {
     this.qatual = q;
-    // Mostrando o título
+   
     let titleDiv = document.getElementById("titulo");
     titleDiv.textContent = q.titulo;
-    // Mostrando as alternativas
+    
     let alts = document.querySelectorAll(".alternativa");
     alts.forEach(function (element, index) {
       element.textContent = q.alternativa[index];
@@ -122,7 +122,7 @@ let app = {
     }
 
     this.atualizaPontos();
-    // Se a pontuação chegar a 6, exibe o botão "Next"
+    
     if (this.Totalpontos === 18) {
       document.getElementById("nextButton").style.display = "block";
       localStorage.setItem("score", this.Totalpontos);
@@ -158,12 +158,12 @@ let app = {
   },
 };
 
-// Função do botão "Next"
+
 document.getElementById("nextButton").addEventListener("click", function () {
   if (pagina === 1) {
     location.href = "final.html";
   }
-  // location.href = "index.html"; // Pode redirecionar para outra página ou reiniciar o quiz
+ 
 });
 
 app.start();

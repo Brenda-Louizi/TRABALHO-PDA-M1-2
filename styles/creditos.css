@@ -5,13 +5,7 @@
 
 body {
   background-color: white;
-  /* Flexbox descomentado se necessário */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* min-height: 100vh; */
-  /* overflow: hidden; */
-  /* padding: 2em; */
+
 }
 
 .carrosel {
@@ -23,7 +17,7 @@ body {
 
 .container {
   display: flex;
-  transition: transform 0.5s ease; /* Transição para as imagens */
+  transition: transform 0.5s ease; 
 }
 
 .imagem {
@@ -37,27 +31,27 @@ body {
 .btn {
   position: absolute;
   top: 35%;
-  background-color: #00c49b; /* Cor de fundo levemente visível */
+  background-color: #00c49b; 
   border: none;
-  cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+  cursor: pointer; 
   transition: transform 0.25s ease-in-out;
 }
 
 .btn img {
-  width: 30px; /* Ajuste o tamanho da seta */
-  height: auto; /* Manter a proporção da imagem */
+  width: 30px; 
+  height: auto; 
 }
 
 .btn-voltar {
-  left: 10px; /* Espaçamento à esquerda */
+  left: 10px; 
 }
 
 .btn-avancar {
-  right: 10px; /* Espaçamento à direita */
+  right: 10px; 
 }
 
 .btn:hover {
-  transform: scale(1.1); /* Efeito de hover para aumentar a seta */
+  transform: scale(1.1); 
 }
 
 .voltar {
@@ -74,7 +68,7 @@ body {
 }
 
 .voltar .btn-pag-inicial:hover img {
-  transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+  transform: scale(1.1); /
 }
 
 @media (max-width: 768px) {
