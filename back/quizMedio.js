@@ -167,7 +167,7 @@ let app = {
 
   resetarJogo: function () {
     alert("VOCÊ PERDEU O JOGO");
-    location.href = "index.html";
+    location.href = "../index.html";
   },
 };
 

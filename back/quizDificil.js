@@ -154,14 +154,14 @@ let app = {
 
   resetarJogo: function () {
     alert("VOCÊ PERDEU O JOGO");
-    location.href = "index.html";
+    location.href = "../index.html";
   },
 };
 
 
 document.getElementById("nextButton").addEventListener("click", function () {
   if (pagina === 1) {
-    location.href = "final.html";
+    location.href = "../pages/final.html";
   }
  
 });
